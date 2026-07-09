@@ -231,7 +231,7 @@ const BusDriverPage = () => {
           </div>
 
           {/* Main grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '1.5rem' }}>
+          <div className="dashboard-grid">
             <AddToBusPanel onAdd={addPassenger} existingIds={existingIds} assignedRoute={assignedRoute} />
             <FeeTrackingPanel passengers={passengers} onToggleFee={toggleFee} />
           </div>

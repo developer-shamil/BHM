@@ -182,7 +182,7 @@ const PrincipalDashboard = () => {
           </div>
 
           {/* Main content grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+          <div className="dashboard-grid">
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <OverduePanel />
             </div>

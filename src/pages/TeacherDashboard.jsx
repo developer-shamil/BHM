@@ -217,7 +217,7 @@ const TeacherDashboard = () => {
             ))}
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1.7fr 1fr', gap: '1.5rem' }}>
+          <div className="dashboard-grid">
             {/* Student list */}
             <Card>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.75rem' }}>
