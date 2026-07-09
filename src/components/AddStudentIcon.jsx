@@ -1,97 +1,46 @@
 import React from 'react';
 
-const AddStudentIcon = ({ size = 120, onClick }) => {
+const AddStudentIcon = ({ size = 48, onClick }) => {
   return (
-    <div 
-      className="add-student-icon-wrapper"
+    <div
       onClick={onClick}
       style={{
         width: size,
         height: size,
+        borderRadius: `${size * 0.28}px`,
+        background: 'linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%)',
         display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
         alignItems: 'center',
-        color: 'white',
-        padding: `${size * 0.08}px`,
+        justifyContent: 'center',
+        boxShadow: '0 6px 12px rgba(255, 107, 107, 0.2)',
+        cursor: 'pointer',
+        transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
         boxSizing: 'border-box',
-        borderRadius: `${size * 0.22}px`, /* Squircle shape */
+      }}
+      onMouseEnter={e => {
+        e.currentTarget.style.transform = 'translateY(-2px) scale(1.05)';
+        e.currentTarget.style.boxShadow = '0 10px 20px rgba(255, 107, 107, 0.35)';
+      }}
+      onMouseLeave={e => {
+        e.currentTarget.style.transform = 'translateY(0) scale(1)';
+        e.currentTarget.style.boxShadow = '0 6px 12px rgba(255, 107, 107, 0.2)';
       }}
     >
-      <svg 
-        width="100%" 
-        height="100%" 
-        viewBox="0 0 100 100" 
-        fill="none" 
-        xmlns="http://www.w3.org/2000/svg"
+      <svg
+        width="52%"
+        height="52%"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="white"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         style={{ display: 'block' }}
       >
-        {/* Head Ring */}
-        <circle 
-          cx="50" 
-          cy="26" 
-          r="10" 
-          stroke="white" 
-          strokeWidth="6.5" 
-          fill="none" 
-        />
-        
-        {/* Body Outline */}
-        <path 
-          d="M28,54 C28,42 38,39 50,39 C62,39 72,42 72,54" 
-          stroke="white" 
-          strokeWidth="6.5" 
-          strokeLinecap="round" 
-          fill="none" 
-        />
-        <path 
-          d="M28,54 L46,54" 
-          stroke="white" 
-          strokeWidth="6.5" 
-          strokeLinecap="round" 
-        />
-
-        {/* Plus Badge */}
-        <circle 
-          cx="69" 
-          cy="52" 
-          r="14" 
-          fill="white" 
-        />
-        
-        {/* Plus Sign inside badge */}
-        <path 
-          d="M69,45.5 L69,58.5 M62.5,52 L75.5,52" 
-          stroke="#FF3B30" 
-          strokeWidth="4" 
-          strokeLinecap="round" 
-        />
-
-        {/* Text */}
-        <text 
-          x="50" 
-          y="76" 
-          textAnchor="middle" 
-          fill="white" 
-          fontSize="11" 
-          fontWeight="900" 
-          fontFamily="system-ui, -apple-system, sans-serif"
-          letterSpacing="0.5"
-        >
-          ADD
-        </text>
-        <text 
-          x="50" 
-          y="89" 
-          textAnchor="middle" 
-          fill="white" 
-          fontSize="11" 
-          fontWeight="900" 
-          fontFamily="system-ui, -apple-system, sans-serif"
-          letterSpacing="0.5"
-        >
-          STUDENT
-        </text>
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <line x1="19" y1="8" x2="19" y2="14" />
+        <line x1="16" y1="11" x2="22" y2="11" />
       </svg>
     </div>
   );
