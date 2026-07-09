@@ -13,26 +13,86 @@ const AddStudentIcon = ({ size = 120, onClick }) => {
         justifyContent: 'center',
         alignItems: 'center',
         color: 'white',
-        gap: '4px'
+        padding: `${size * 0.08}px`,
+        boxSizing: 'border-box',
+        borderRadius: `${size * 0.22}px`, /* Squircle shape */
       }}
     >
-      <svg width={size * 0.5} height={size * 0.4} viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="40" cy="20" r="14" stroke="white" strokeWidth="8" />
-        <path d="M10,70 Q10,45 40,45 L60,45" stroke="white" strokeWidth="8" fill="none" strokeLinecap="round" />
-        <path d="M10,70 L45,70" stroke="white" strokeWidth="8" fill="none" strokeLinecap="round" />
+      <svg 
+        width="100%" 
+        height="100%" 
+        viewBox="0 0 100 100" 
+        fill="none" 
+        xmlns="http://www.w3.org/2000/svg"
+        style={{ display: 'block' }}
+      >
+        {/* Head Ring */}
+        <circle 
+          cx="50" 
+          cy="26" 
+          r="10" 
+          stroke="white" 
+          strokeWidth="6.5" 
+          fill="none" 
+        />
         
-        <circle cx="75" cy="55" r="22" fill="white" />
-        <path d="M75,40 L75,70 M60,55 L90,55" stroke="#FF4D4D" strokeWidth="6" strokeLinecap="round" />
+        {/* Body Outline */}
+        <path 
+          d="M28,54 C28,42 38,39 50,39 C62,39 72,42 72,54" 
+          stroke="white" 
+          strokeWidth="6.5" 
+          strokeLinecap="round" 
+          fill="none" 
+        />
+        <path 
+          d="M28,54 L46,54" 
+          stroke="white" 
+          strokeWidth="6.5" 
+          strokeLinecap="round" 
+        />
+
+        {/* Plus Badge */}
+        <circle 
+          cx="69" 
+          cy="52" 
+          r="14" 
+          fill="white" 
+        />
+        
+        {/* Plus Sign inside badge */}
+        <path 
+          d="M69,45.5 L69,58.5 M62.5,52 L75.5,52" 
+          stroke="#FF3B30" 
+          strokeWidth="4" 
+          strokeLinecap="round" 
+        />
+
+        {/* Text */}
+        <text 
+          x="50" 
+          y="76" 
+          textAnchor="middle" 
+          fill="white" 
+          fontSize="11" 
+          fontWeight="900" 
+          fontFamily="system-ui, -apple-system, sans-serif"
+          letterSpacing="0.5"
+        >
+          ADD
+        </text>
+        <text 
+          x="50" 
+          y="89" 
+          textAnchor="middle" 
+          fill="white" 
+          fontSize="11" 
+          fontWeight="900" 
+          fontFamily="system-ui, -apple-system, sans-serif"
+          letterSpacing="0.5"
+        >
+          STUDENT
+        </text>
       </svg>
-      <div style={{
-        fontFamily: 'sans-serif', 
-        fontWeight: 800, 
-        fontSize: size * 0.15, 
-        textAlign: 'center',
-        lineHeight: 1.1
-      }}>
-        ADD<br/>STUDENT
-      </div>
     </div>
   );
 };

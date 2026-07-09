@@ -12,7 +12,7 @@
   --text-muted: #6B7280;
   
   /* Gradients */
-  --gradient-red-pink: linear-gradient(135deg, #FF4D4D 0%, #FF2A85 100%);
+  --gradient-red-pink: linear-gradient(45deg, #FF5E00 0%, #FF2A85 100%);
   --gradient-blue: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
 
   /* Shadows */
